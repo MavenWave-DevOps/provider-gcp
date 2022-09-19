@@ -43,11 +43,6 @@ func (mg *ServiceAccount) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetPublishConnectionDetailsTo of this ServiceAccount.
-func (mg *ServiceAccount) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
-	return mg.Spec.PublishConnectionDetailsTo
-}
-
 // GetWriteConnectionSecretToReference of this ServiceAccount.
 func (mg *ServiceAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -74,11 +69,6 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *ServiceAccount) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
-}
-
-// SetPublishConnectionDetailsTo of this ServiceAccount.
-func (mg *ServiceAccount) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
-	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this ServiceAccount.
@@ -109,11 +99,6 @@ func (mg *ServiceAccountKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetPublishConnectionDetailsTo of this ServiceAccountKey.
-func (mg *ServiceAccountKey) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
-	return mg.Spec.PublishConnectionDetailsTo
-}
-
 // GetWriteConnectionSecretToReference of this ServiceAccountKey.
 func (mg *ServiceAccountKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -140,11 +125,6 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *ServiceAccountKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
-}
-
-// SetPublishConnectionDetailsTo of this ServiceAccountKey.
-func (mg *ServiceAccountKey) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
-	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this ServiceAccountKey.
@@ -175,11 +155,6 @@ func (mg *ServiceAccountPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetPublishConnectionDetailsTo of this ServiceAccountPolicy.
-func (mg *ServiceAccountPolicy) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
-	return mg.Spec.PublishConnectionDetailsTo
-}
-
 // GetWriteConnectionSecretToReference of this ServiceAccountPolicy.
 func (mg *ServiceAccountPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -206,11 +181,6 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *ServiceAccountPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
-}
-
-// SetPublishConnectionDetailsTo of this ServiceAccountPolicy.
-func (mg *ServiceAccountPolicy) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
-	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this ServiceAccountPolicy.

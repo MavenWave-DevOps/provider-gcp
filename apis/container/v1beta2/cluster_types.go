@@ -51,9 +51,9 @@ type ClusterParameters struct {
 
 	// Location: The name of the Google Compute
 	// Engine
-	// [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available)
+	// [zone](/compute/docs/regions-zones/regions-zones#available)
 	// or
-	// [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in
+	// [region](/compute/docs/regions-zones/regions-zones#available) in
 	// which
 	// the cluster resides.
 	// +immutable
@@ -174,7 +174,7 @@ type ClusterParameters struct {
 
 	// Locations: The list of Google Compute
 	// Engine
-	// [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's
+	// [zones](/compute/docs/zones#available) in which the cluster's
 	// nodes
 	// should be located.
 	// +optional
@@ -234,7 +234,7 @@ type ClusterParameters struct {
 
 	// Network: The name of the Google Compute
 	// Engine
-	// [network](https://cloud.google.com/vpc/docs/vpc#vpc_networks_and_subnets) to which
+	// [network](/compute/docs/networks-and-firewalls#networks) to which
 	// the
 	// cluster is connected. If left unspecified, the `default` network
 	// will be used.
@@ -290,7 +290,7 @@ type ClusterParameters struct {
 
 	// Subnetwork: The name of the Google Compute
 	// Engine
-	// [subnetwork](https://cloud.google.com/vpc/docs/subnets) to which the
+	// [subnetwork](/compute/docs/subnetworks) to which the
 	// cluster is connected.
 	// +optional
 	// +immutable
@@ -340,7 +340,8 @@ type ClusterObservation struct {
 
 	// CurrentNodeVersion: Deprecated,
 	// use
-	// [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
+	// [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/proj
+	// ects.zones.clusters.nodePools)
 	// instead. The current version of the node software components. If they
 	// are
 	// currently at multiple versions because they're in the process of
@@ -367,9 +368,9 @@ type ClusterObservation struct {
 
 	// Location: The name of the Google Compute
 	// Engine
-	// [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available)
+	// [zone](/compute/docs/regions-zones/regions-zones#available)
 	// or
-	// [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in
+	// [region](/compute/docs/regions-zones/regions-zones#available) in
 	// which
 	// the cluster resides.
 	Location string `json:"location"`
@@ -454,7 +455,7 @@ type ClusterObservation struct {
 
 	// Zone: The name of the Google Compute
 	// Engine
-	// [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+	// [zone](/compute/docs/zones#available) in which the
 	// cluster
 	// resides.
 	// This field is deprecated, use location instead.
@@ -632,7 +633,7 @@ type Autopilot struct {
 // node pools based on the current needs.
 type ClusterAutoscaling struct {
 	// AutoprovisioningLocations: The list of Google Compute Engine
-	// [zones](https://cloud.google.com/compute/docs/zones#available)
+	// [zones](/compute/docs/zones#available)
 	// in which the NodePool's nodes can be created by NAP.
 	AutoprovisioningLocations []string `json:"autoprovisioningLocations,omitempty"`
 
@@ -1223,7 +1224,8 @@ type NetworkConfigSpec struct {
 	// kube-proxy.
 	//   "ADVANCED_DATAPATH" - Use the eBPF based GKE Dataplane V2 with
 	// additional features. See the [GKE Dataplane V2
-	// documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/dataplane-v2) for more.
+	// documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/
+	// dataplane-v2) for more.
 	// +optional
 	DatapathProvider *string `json:"datapathProvider,omitempty"`
 
@@ -1270,14 +1272,14 @@ type DefaultSnatStatus struct {
 type NetworkConfigStatus struct {
 	// Network: The relative name of the Google Compute
 	// Engine
-	// network(https://cloud.google.com/vpc/docs/vpc#vpc_networks_and_subnets) to which
+	// network(/compute/docs/networks-and-firewalls#networks) to which
 	// the cluster is connected.
 	// Example: projects/my-project/global/networks/my-network
 	Network string `json:"network,omitempty"`
 
 	// Subnetwork: The relative name of the Google Compute
 	// Engine
-	// [subnetwork](https://cloud.google.com/vpc/docs/vpc) to which the cluster is
+	// [subnetwork](/compute/docs/vpc) to which the cluster is
 	// connected.
 	// Example:
 	// projects/my-project/regions/us-central1/subnetworks/my-subnet
@@ -1427,7 +1429,7 @@ type NodePoolClusterStatus struct {
 
 	// InitialNodeCount: The initial node count for the pool. You must
 	// ensure that your
-	// Compute Engine <a href="https://cloud.google.com/compute/quotas">resource
+	// Compute Engine <a href="/compute/docs/resource-quotas">resource
 	// quota</a>
 	// is sufficient for this number of instances. You must also have
 	// available
@@ -1436,12 +1438,13 @@ type NodePoolClusterStatus struct {
 
 	// InstanceGroupUrls: The resource URLs of the [managed
 	// instance
-	// groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances)
+	// groups](/compute/docs/instance-groups/creating-groups-of-mana
+	// ged-instances)
 	// associated with this node pool.
 	InstanceGroupUrls []string `json:"instanceGroupUrls,omitempty"`
 
 	// Locations: The list of Google Compute Engine
-	// [zones](https://cloud.google.com/compute/docs/regions-zones#available)
+	// [zones](/compute/docs/zones#available)
 	// in which the NodePool's nodes should be located.
 	Locations []string `json:"locations,omitempty"`
 
@@ -1575,7 +1578,7 @@ type NodeConfigClusterStatus struct {
 
 	// MachineType: The name of a Google Compute Engine
 	// [machine
-	// type](https://cloud.google.com/compute/docs/machine-types) (e.g.
+	// type](/compute/docs/machine-types) (e.g.
 	// `n1-standard-1`).
 	//
 	// If unspecified, the default machine type is
@@ -1704,7 +1707,7 @@ type AcceleratorConfigClusterStatus struct {
 
 	// AcceleratorType: The accelerator type resource name. List of
 	// supported accelerators
-	// [here](https://cloud.google.com/compute/docs/gpus/#Introduction)
+	// [here](/compute/docs/gpus/#Introduction)
 	AcceleratorType string `json:"acceleratorType,omitempty"`
 }
 

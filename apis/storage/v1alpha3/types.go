@@ -321,14 +321,16 @@ func NewRetentionPolicy(rp *storage.RetentionPolicy) *RetentionPolicy {
 
 // CopyToRetentionPolicy create a copy in storage format
 func CopyToRetentionPolicy(rp *RetentionPolicy) *storage.RetentionPolicy {
-	d := time.Duration(0)
+	var d time.Duration
 
-	if rp != nil {
+	if rp == nil {
+		d = time.Duration(0)
+	} else {
 		d = time.Duration(rp.RetentionPeriodSeconds)
 	}
 
 	return &storage.RetentionPolicy{
-		RetentionPeriod: d * time.Second, //nolint:durationcheck
+		RetentionPeriod: d * time.Second,
 	}
 }
 
